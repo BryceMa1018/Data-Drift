@@ -81,9 +81,10 @@ The visualization below (stored in `/drift_charts`) illustrates the core detecti
 The performance of the drift detection pipeline is evaluated using the Average Run Length (ARL), which measures the delay between the drift onset and the first alarm. The result is exported to `data/drift_evaluation_results.csv`. 
 
 
-| Method | Metric | ARL (Detection Delay) | Interpretation |
-| :--- | :--- | :--- | :--- |
-| CUSUM | Mahalanobis Distance (MD) | 0 days | Immediate detection at drift onset |
+| Method | Metric | ARL | 
+| :--- | :--- | :--- | 
+| CUSUM | Mahalanobis Distance (MD) | 0 days | 
+
 
 * **Detection Delay**: Our results indicate that the drift was successfully captured within a very short interval after the onset, proving the high sensitivity of the Mahalanobis-CUSUM approach.
 
