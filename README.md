@@ -83,7 +83,7 @@ The performance of the drift detection pipeline is evaluated using the Average R
 
 | Method | Metric | ARL | 
 | :--- | :--- | :--- | 
-| CUSUM | Mahalanobis Distance (MD) | 0 days | 
+| CUSUM | Mahalanobis Distance (MD) | 0  | 
 
 
 * **Detection Delay**: Our results indicate that the drift was successfully captured within a very short interval after the onset, proving the high sensitivity of the Mahalanobis-CUSUM approach.
