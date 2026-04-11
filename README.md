@@ -33,13 +33,13 @@ The first column must be sample_id, and the last column must be dataset_type.
 ### Run the code
  Execute the following command:
 ```bash
-python generating_ood_final.py
+python generating_MD.py
 ```
 The execution will automatically generate `MD_result.csv`and place it within the `/data` subfolder.
 
  Execute the statistical process control analysis and evaluation:
 ```bash
-python spc_final.py
+python spc.py
 ```
 ### Outputs
 
