@@ -1,0 +1,8 @@
+{
+    "project_name": "Drift_detection",
+    "dataset_config": {
+    "input_raw_name": "data_drift_data.csv",
+    "samples_per_day": 20,
+    "output_md_name": "MD_result.csv"
+  }
+}
