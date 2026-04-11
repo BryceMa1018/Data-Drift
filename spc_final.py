@@ -129,7 +129,7 @@ def calculate_upper_cusum_limit(normal_data_std, k=0.5, confidence=0.9973, u_max
 
     else:
         print("Warning: CUSUM upper limit iteration not fully converged.")
-        return 3.0
+        return 4.0
 
     # -------------------------- 4. Interpolation --------------------------
     sort_idx = np.argsort(p_new)
@@ -191,7 +191,7 @@ def calculate_lower_cusum_limit(normal_data_std, k=0.5, confidence=0.9973, u_max
 
     else:
         print("Warning: CUSUM lower limit iteration not fully converged (try max_iter=1000)")
-        return 3.0
+        return 4.0
 
     # -------------------------- 4. Interpolation --------------------------
     sort_idx = np.argsort(p_new)
