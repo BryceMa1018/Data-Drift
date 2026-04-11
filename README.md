@@ -5,7 +5,7 @@ The pipeline includes data preprocessing, statistical modeling, and visualizatio
 
 ---
 
-## Quick Start
+## 📊 Quick Start
 
 To run the drift detection pipeline, follow the steps below.
 
@@ -47,9 +47,47 @@ python spc_final.py
 - `Visualization`: A control chart named `cusum_MD.png` will be generated in the `/drift_charts` directory.
 
 
-### Validation 
+
+
+
+---
+
+## 🧪 Experimental Validation & Results
+
+To demonstrate the reliability of the detection pipeline, we conducted a comprehensive simulation using the provided scripts.
+
+### 1. Validation Process
+The validation follows a structured two-stage workflow using a synthetic dataset of **1,000 samples** with a **bivariate standard normal distribution**:
+
+* **Temporal Scale**: For realistic interpretation, the data is partitioned into daily intervals, with **20 samples representing 1 day** (totaling 50 days of monitoring).
+* **Baseline Calibration**: The first 500 samples (Days 1–25, labeled as `calibration`) are used to fit the empirical distribution of Mahalanobis Distances. This stage establishes the "normal" operational profile under stable conditions.
+* **Drift Monitoring**: The subsequent 500 samples (Days 26–50, labeled as `test`) are used for real-time monitoring. To simulate real-world data drift, a **mean shift** was introduced starting from the "test" phase, while maintaining the original covariance structure.
+
+
+
+### 2. Results Display
+
 
 The results shown below are generated based on a simulated dataset for validation purposes. These results demonstrate the algorithm's capability to detect shifts but may differ from the specific clinical metrics reported in the paper due to data privacy (e.g., MIMIC-IV access restrictions).
+
+The analysis yields two primary outputs that can be found in this repository:
+
+#### **A. CUSUM Control Chart**
+The visualization below (stored in `/drift_charts`) illustrates the core detection logic. The **blue and red lines** represent the cumulative sum of positive and negative deviations. When either line crosses the **dashed control limits**, a drift alarm is triggered.
+
+![CUSUM Control Chart](drift_charts/cusum_MD.png)
+
+#### **B. Quantitative Evaluation**
+The performance of the drift detection pipeline is evaluated using the Average Run Length (ARL), which measures the delay between the drift onset and the first alarm. The result is exported to `data/drift_evaluation_results.csv`. 
+
+
+| Method | Metric | ARL (Detection Delay) | Interpretation |
+| :--- | :--- | :--- | :--- |
+| CUSUM | Mahalanobis Distance (MD) | 0 days | Immediate detection at drift onset |
+
+* **Detection Delay**: Our results indicate that the drift was successfully captured within a very short interval after the onset, proving the high sensitivity of the Mahalanobis-CUSUM approach.
+
+---
 
 
 
