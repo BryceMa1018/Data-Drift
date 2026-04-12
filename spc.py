@@ -306,7 +306,7 @@ def main():
         print(f"❌ CUSUM analysis failed: {str(e)}")
 
     if results:
-        out_csv = "data\\drift_evaluation_results.csv"
+        out_csv = os.path.join("data", "drift_evaluation_results.csv")
         pd.DataFrame(results).to_csv(out_csv, index=False, encoding='utf-8-sig')
         print(f"\n✅ All results saved to: {os.path.abspath(out_csv)}")
 
