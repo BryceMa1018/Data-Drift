@@ -11,6 +11,23 @@ To run the drift detection pipeline, follow the steps below.
 
 ---
 
+### 🛠️ Environment Installation
+
+This project is developed and tested using **Python 3.13+**. The following core libraries are required to run the detection pipeline:
+
+| Library | Full Name | Version Used |
+| :--- | :--- | :--- |
+| **NumPy** | Numerical Python | 2.1.3 |
+| **Pandas** | Python Data Analysis Library | 2.2.3 |
+| **Matplotlib** | Mathematical Plotting Library | 3.10.0 |
+| **SciPy** | Scientific Python | 1.15.3 |
+
+To ensure full compatibility, we recommend installing the exact versions specified in the `requirements.txt` file:
+
+```bash
+pip install -r requirements.txt
+```
+
 ### Data Preparation
 
 1. Prepare your raw dataset and place it under the `./data/` directory.
