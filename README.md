@@ -1,7 +1,10 @@
 # Drift_detection
 
-This repository provides an implementation for drift detection in sequential data using **Mahalanobis Distance** and **CUSUM control charts**.  
-The pipeline includes data preprocessing, statistical modeling, and visualization for detecting distribution shifts over time.
+## 📖 Background
+
+In the dynamic environment of healthcare, clinical predictive models often suffer from performance silent failure due to "data drift". This occurs when the distribution of inputs and outputs changes over time, rendering static models unreliable.
+
+This repository implements a robust **Statistical Process Control (SPC)** framework. By mapping high-dimensional feature into **Mahalanobis Distance (MD)** space and monitoring them via **Cumulative Sum (CUSUM)** control charts, our approach provides a highly sensitive, real-time mechanism to detect subtle performance decays before they compromise patient safety.
 
 ---
 
@@ -106,6 +109,22 @@ The performance of the drift detection pipeline is evaluated using the Average R
 * **Detection Delay**: Our results indicate that the drift was successfully captured within a very short interval after the onset, proving the high sensitivity of the Mahalanobis-CUSUM approach.
 
 ---
+
+
+## 📚 Citation & References
+### Cite this work
+
+If you use this code or our  CUSUM-SPC framework in your research, please cite our paper:
+
+Ma, J., et al. (2026). Algorithm's Performance Detection. Journal of Biomedical Informatics (In Press/Submitted).
+
+
+
+
+
+
+
+
 
 
 
